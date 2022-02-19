@@ -24,6 +24,6 @@ Puntos a tener en cuenta:
   - 9 Cuatro Caminos
   - 10 Ríos Rosas
 
-
-
+Los datos de Prueba de las rutas y tramos creados están en este insert:
+[Insert datos de prueba](https://github.com/Asurbanipal1977/RutasTransporte/blob/main/Insert.sql)
 
