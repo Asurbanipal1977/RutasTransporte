@@ -1,4 +1,4 @@
-# RUTAS TRASNPORTE
+# RUTAS TRANSPORTE
 
 ## DISEÑO DE BASE DE DATOS
 El sistema gestiona información de una red de transporte con los siguientes elementos:
