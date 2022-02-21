@@ -30,7 +30,9 @@ Los datos de Prueba de las rutas y tramos creados están en este insert:
 Las rutas que vamos a tener son:
 
 - Ruta ázul:
-- ![imagen](https://user-images.githubusercontent.com/37666654/155022029-6ab2d620-920a-43b1-a592-10f2d5065649.png)
+```
+![imagen](https://user-images.githubusercontent.com/37666654/155022029-6ab2d620-920a-43b1-a592-10f2d5065649.png)
+```
 
 - Ruta Amarilla:
 - ![imagen](https://user-images.githubusercontent.com/37666654/155022090-cb8a7e62-1c86-4907-a16e-98bff2a957e0.png)
