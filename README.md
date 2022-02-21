@@ -67,5 +67,15 @@ Se implementa en el código el acceso a la base de datos SQL Server. Para mostra
 
 El primer grid nos muestra las rutas y, el segundo grid, nos muestra los tramos de la ruta seleccionada. En este último grid se hace un join entre las tablas Rutas, Tramos y TramosRutas(una ruta puede tener varios tramos y, un tramo, estar en varias rutas)
 
+### 1.2. GRID CAMINOS MÍNIMOS
+
+Para obtener el camino mínimo entre dos paradas, se aplica el algoritmo de Floyd Warshall. Para este algoritmo hay que generar una matriz con todas las paradas como filas y columnas. 
+El proceso busca si existe un tramo intermedio cuya longitud sea menor que la distancia entre el inicio y el fin. Para realizar este proceso tenemos que usar tres bucles:
+- Con todas las paradas de la red como intermedias.
+- Con todas las paradas de la red como inicio.
+- Con todas las paradas de la red como fin.
+
+Además de calcular las distancias mínimas, también se obtiene las paradas para esa ruta más corta.
+
 
 
