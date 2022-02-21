@@ -17,7 +17,7 @@ namespace CapaPresentacion
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frRutasTransporte());
+            Application.Run(new FrRutasTransporte());
         }
     }
 }

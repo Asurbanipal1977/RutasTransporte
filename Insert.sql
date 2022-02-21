@@ -71,3 +71,5 @@ insert into RutasTramos (CodRuta,CodTramo,Orden,Longitud,Duracion) values
 (5,13,3,1.21,1.23),
 (5,7,4,2.21,2.01),
 (5,3,5,1.28,1.03)
+
+

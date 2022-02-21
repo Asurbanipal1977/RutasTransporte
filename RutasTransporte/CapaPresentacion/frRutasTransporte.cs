@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class frRutasTransporte : Form
+    public partial class FrRutasTransporte : Form
     {
         private RutasTransporteCN capaNegocio = new RutasTransporteCN();
 
-        public frRutasTransporte()
+        public FrRutasTransporte()
         {
             InitializeComponent();
         }
@@ -30,7 +30,7 @@ namespace CapaPresentacion
             gvTramos.DataSource = capaNegocio.ListarTramosRuta(idRuta).Tables["tbl"];
         }
 
-        private void frRutasTransporte_Load(object sender, EventArgs e)
+        private void FrRutasTransporte_Load(object sender, EventArgs e)
         {
             CargarDatosRutas();
             //Cargamos por defecto la primera ruta
@@ -51,5 +51,11 @@ namespace CapaPresentacion
             CargarDatosTramos(idRuta);
         }
 
+        private void btnMinimo_Click(object sender, EventArgs e)
+        {
+            FrRutaMinima frRutaMinima = new FrRutaMinima();
+            frRutaMinima.StartPosition = FormStartPosition.CenterParent;
+            frRutaMinima.ShowDialog();
+        }
     }
 }

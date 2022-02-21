@@ -2,7 +2,7 @@
 
 namespace CapaPresentacion
 {
-    partial class frRutasTransporte
+    partial class FrRutasTransporte
     {
         /// <summary>
         ///  Required designer variable.
@@ -35,6 +35,7 @@ namespace CapaPresentacion
             this.lblRutas = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.gvTramos = new System.Windows.Forms.DataGridView();
+            this.btnMinimo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvRutas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTramos)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +60,7 @@ namespace CapaPresentacion
             this.gvRutas.ReadOnly = true;
             this.gvRutas.RowHeadersWidth = 51;
             this.gvRutas.RowTemplate.Height = 29;
-            this.gvRutas.Size = new System.Drawing.Size(300, 302);
+            this.gvRutas.Size = new System.Drawing.Size(392, 302);
             this.gvRutas.TabIndex = 1;
             this.gvRutas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvRutas_CellClick);
             this.gvRutas.SelectionChanged += new System.EventHandler(this.gvRutas_SelectionChanged);
@@ -76,7 +77,7 @@ namespace CapaPresentacion
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(334, 104);
+            this.label3.Location = new System.Drawing.Point(430, 104);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 20);
             this.label3.TabIndex = 3;
@@ -87,27 +88,39 @@ namespace CapaPresentacion
             this.gvTramos.AllowUserToAddRows = false;
             this.gvTramos.AllowUserToDeleteRows = false;
             this.gvTramos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvTramos.Location = new System.Drawing.Point(334, 136);
+            this.gvTramos.Location = new System.Drawing.Point(430, 136);
             this.gvTramos.Name = "gvTramos";
             this.gvTramos.ReadOnly = true;
             this.gvTramos.RowHeadersWidth = 51;
             this.gvTramos.RowTemplate.Height = 29;
-            this.gvTramos.Size = new System.Drawing.Size(750, 302);
+            this.gvTramos.Size = new System.Drawing.Size(654, 302);
             this.gvTramos.TabIndex = 4;
             // 
-            // frRutasTransporte
+            // btnMinimo
+            // 
+            this.btnMinimo.Location = new System.Drawing.Point(12, 458);
+            this.btnMinimo.Name = "btnMinimo";
+            this.btnMinimo.Size = new System.Drawing.Size(140, 46);
+            this.btnMinimo.TabIndex = 5;
+            this.btnMinimo.Text = "Caminos Mínimos";
+            this.btnMinimo.UseVisualStyleBackColor = true;
+            this.btnMinimo.Click += new System.EventHandler(this.btnMinimo_Click);
+            // 
+            // FrRutasTransporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1108, 450);
+            this.ClientSize = new System.Drawing.Size(1108, 525);
+            this.Controls.Add(this.btnMinimo);
             this.Controls.Add(this.gvTramos);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblRutas);
             this.Controls.Add(this.gvRutas);
             this.Controls.Add(this.label1);
-            this.Name = "frRutasTransporte";
+            this.Name = "FrRutasTransporte";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rutas de Transporte";
-            this.Load += new System.EventHandler(this.frRutasTransporte_Load);
+            this.Load += new System.EventHandler(this.FrRutasTransporte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvRutas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTramos)).EndInit();
             this.ResumeLayout(false);
@@ -122,5 +135,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label lblRutas;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView gvTramos;
+        private System.Windows.Forms.Button btnMinimo;
     }
 }
