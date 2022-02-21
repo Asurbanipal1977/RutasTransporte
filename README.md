@@ -58,6 +58,14 @@ Las rutas que vamos a tener son:
 La distancia viene expresada en kilómetros.
 
 
+### 1.1. GRIDS CATÁLOGO
+
+Se implementa en el código el acceso a la base de datos SQL Server. Para mostrar la información usamos dos grids:
+
+
+![imagen](https://user-images.githubusercontent.com/37666654/155023014-6f9806fb-1841-42fe-ba74-2071065f85b3.png)
+
+El primer grid nos muestra las rutas y, el segundo grid, nos muestra los tramos de la ruta seleccionada. En este último grid se hace un join entre las tablas Rutas, Tramos y TramosRutas(una ruta puede tener varios tramos y, un tramo, estar en varias rutas)
 
 
 
