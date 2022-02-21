@@ -27,3 +27,25 @@ Puntos a tener en cuenta:
 Los datos de Prueba de las rutas y tramos creados están en este insert:
 [Insert datos de prueba](https://github.com/Asurbanipal1977/RutasTransporte/blob/main/Insert.sql)
 
+Las rutas que vamos a tener son:
+- Ruta ázul:
+![imagen](https://user-images.githubusercontent.com/37666654/155022029-6ab2d620-920a-43b1-a592-10f2d5065649.png)
+
+- Ruta Amarilla
+![imagen](https://user-images.githubusercontent.com/37666654/155022090-cb8a7e62-1c86-4907-a16e-98bff2a957e0.png)
+
+- Ruta Verde
+![imagen](https://user-images.githubusercontent.com/37666654/155022129-51f8a89e-d83e-4121-bc09-2884dafc2505.png)
+
+- Ruta Naranja
+![imagen](https://user-images.githubusercontent.com/37666654/155022154-4ffb791e-f199-4dcc-8b51-f6c05b943a01.png)
+
+- Ruta Rojo
+![imagen](https://user-images.githubusercontent.com/37666654/155022215-59542041-fb1f-4c67-9b9a-a004c45e0a9c.png)
+
+La distancia viene expresada en kilómetros.
+
+
+
+
+
