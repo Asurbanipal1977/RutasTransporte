@@ -46,9 +46,11 @@ namespace CapaPresentacion
 
         private void gvRutas_SelectionChanged(object sender, EventArgs e)
         {
-            int idRuta = (int)gvRutas.CurrentRow.Cells["Id"].Value;
-
-            CargarDatosTramos(idRuta);
+            if (gvRutas.CurrentRow != null)
+            {
+                int idRuta = (int)gvRutas.CurrentRow.Cells["Id"].Value;
+                CargarDatosTramos(idRuta);
+            }
         }
 
         private void btnMinimo_Click(object sender, EventArgs e)
@@ -56,6 +58,13 @@ namespace CapaPresentacion
             FrRutaMinima frRutaMinima = new FrRutaMinima();
             frRutaMinima.StartPosition = FormStartPosition.CenterParent;
             frRutaMinima.ShowDialog();
+        }
+
+        private void btnTramosNoValidos_Click(object sender, EventArgs e)
+        {
+            FrTramosNoOptimos frTramosNoOptimos = new FrTramosNoOptimos();
+            frTramosNoOptimos.StartPosition = FormStartPosition.CenterParent;
+            frTramosNoOptimos.ShowDialog();
         }
     }
 }

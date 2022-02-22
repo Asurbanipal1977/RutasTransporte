@@ -49,6 +49,19 @@ namespace CapaNegocio
             }
         }
 
+        public DataSet TramosNoOptimos()
+        {
+            try
+            {
+                return capaDatos.TramosNoOptimos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
         public int CantidadParadas()
         {
             int cantidad = 0;

@@ -36,6 +36,8 @@
             // 
             this.gvRutaMinima.AllowUserToAddRows = false;
             this.gvRutaMinima.AllowUserToDeleteRows = false;
+            this.gvRutaMinima.AllowUserToResizeColumns = false;
+            this.gvRutaMinima.AllowUserToResizeRows = false;
             this.gvRutaMinima.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvRutaMinima.Location = new System.Drawing.Point(35, 31);
             this.gvRutaMinima.Name = "gvRutaMinima";

@@ -36,6 +36,7 @@ namespace CapaPresentacion
             this.label3 = new System.Windows.Forms.Label();
             this.gvTramos = new System.Windows.Forms.DataGridView();
             this.btnMinimo = new System.Windows.Forms.Button();
+            this.btnTramosNoValidos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvRutas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTramos)).BeginInit();
             this.SuspendLayout();
@@ -106,11 +107,22 @@ namespace CapaPresentacion
             this.btnMinimo.UseVisualStyleBackColor = true;
             this.btnMinimo.Click += new System.EventHandler(this.btnMinimo_Click);
             // 
+            // btnTramosNoValidos
+            // 
+            this.btnTramosNoValidos.Location = new System.Drawing.Point(168, 458);
+            this.btnTramosNoValidos.Name = "btnTramosNoValidos";
+            this.btnTramosNoValidos.Size = new System.Drawing.Size(157, 46);
+            this.btnTramosNoValidos.TabIndex = 6;
+            this.btnTramosNoValidos.Text = "Tramos no Válidos";
+            this.btnTramosNoValidos.UseVisualStyleBackColor = true;
+            this.btnTramosNoValidos.Click += new System.EventHandler(this.btnTramosNoValidos_Click);
+            // 
             // FrRutasTransporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1108, 525);
+            this.ClientSize = new System.Drawing.Size(1135, 600);
+            this.Controls.Add(this.btnTramosNoValidos);
             this.Controls.Add(this.btnMinimo);
             this.Controls.Add(this.gvTramos);
             this.Controls.Add(this.label3);
@@ -136,5 +148,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView gvTramos;
         private System.Windows.Forms.Button btnMinimo;
+        private System.Windows.Forms.Button btnTramosNoValidos;
     }
 }

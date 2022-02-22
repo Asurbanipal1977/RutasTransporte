@@ -141,5 +141,29 @@ namespace CapaDatos
                 return distanciaTramos;
             }
         }
+
+        public DataSet TramosNoOptimos()
+        {
+            using (SqlConnection con = new SqlConnection(cadenaConexion))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand command = new SqlCommand("RutasNoOptimas", con);
+                    command.CommandType = CommandType.StoredProcedure;
+                    DataSet dset = new DataSet();
+                    SqlDataAdapter adaptador = new SqlDataAdapter();
+                    adaptador.SelectCommand = command;
+                    adaptador.Fill(dset, "tbl");
+
+                    return dset;
+
+                }
+                catch (Exception e)
+                {
+                    throw;
+                }
+            }
+        }
     }
 }

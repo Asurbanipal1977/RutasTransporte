@@ -131,11 +131,20 @@ namespace CapaPresentacion
         {
             obtenerGridInicial();
             obtenerMinimasDistancias();
+            foreach (DataGridViewColumn Col in gvRutaMinima.Columns)
+            {
+                Col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
         }
 
         private void gvRutaMinima_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show(obtenerNombreParadas(aDistanciaMinima[e.RowIndex, e.ColumnIndex]));
+            string nombreParadas = string.Empty;
+            if (e.RowIndex > -1 && e.ColumnIndex > -1)
+            {
+                nombreParadas = obtenerNombreParadas(aDistanciaMinima[e.RowIndex, e.ColumnIndex]);
+                if (!string.IsNullOrEmpty(nombreParadas)) MessageBox.Show(nombreParadas);
+            }            
         }
 
 
