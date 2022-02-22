@@ -121,3 +121,5 @@ Desde el formulario principal FrRutasTransporte, se ha puesto un botón para que
   ```
   private static readonly string cadenaConexion = @"Data Source=GIGABYTE-SABRE\SQLEXPRESS;Initial Catalog=RedTransporte;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 ```
+  
+ - En la aplicación de consola, el proyecto de inicio es "CapaPresentacion" que arranca el formulario FrRutasTransporte
