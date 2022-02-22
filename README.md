@@ -24,8 +24,8 @@ Puntos a tener en cuenta:
   - 9 Cuatro Caminos
   - 10 Ríos Rosas
 
-Los datos de Prueba de las rutas y tramos creados están en este insert:
-[Insert datos de prueba](https://github.com/Asurbanipal1977/RutasTransporte/blob/main/Insert.sql)
+La exportación de la base de datos se puede ver en esta ruta:
+[Base de datos](https://github.com/Asurbanipal1977/RutasTransporte/edit/main/RedTransporte.sql)
 
 Las rutas que vamos a tener son:
 
@@ -110,4 +110,12 @@ Para calcular las rutas no óptimas, usamos dos procedimientos almacenados.
   
 Desde el formulario principal FrRutasTransporte, se ha puesto un botón para que abra el formulario FrTramosNoOptimos y llame al procedimiento almacenado RutasNoOptimas.
   
+ ### EJECUCIÓN
+ Para ejecutar la aplicación hay que bajarse el repositorio, que incluye la base de datos. 
+  - Se debe restaurar la base de datos que está exportada en: 
+  [Base de datos](https://github.com/Asurbanipal1977/RutasTransporte/edit/main/RedTransporte.sql)
   
+  - Una vez resturada, se debe cambiar la cadena de conexión de la clase RutasTransporteCD por nuestra cadena de conexión:
+  ```
+  private static readonly string cadenaConexion = @"Data Source=GIGABYTE-SABRE\SQLEXPRESS;Initial Catalog=RedTransporte;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+```
