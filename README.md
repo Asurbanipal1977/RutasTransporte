@@ -60,7 +60,7 @@ La distancia viene expresada en kilómetros.
 
 ### 1.1. GRIDS CATÁLOGO
 
-Se implementa en el código el acceso a la base de datos SQL Server. Para mostrar la información usamos dos grids:
+Se implementa en el código el acceso a la base de datos SQL Server. Para mostrar la información usamos dos DataGridView:
 
 
 ![imagen](https://user-images.githubusercontent.com/37666654/155023014-6f9806fb-1841-42fe-ba74-2071065f85b3.png)
@@ -75,7 +75,39 @@ El proceso busca si existe un tramo intermedio cuya longitud sea menor que la di
 - Con todas las paradas de la red como inicio.
 - Con todas las paradas de la red como fin.
 
-Además de calcular las distancias mínimas, también se obtiene las paradas para esa ruta más corta.
+Además de calcular las distancias mínimas, también se obtiene las paradas para esa ruta más corta. La ruta más corta con las paradas está almacenada en un List<RutasTramos> que, a su vez, tiene una lista de List<Tramos>. Esta sería la estructura:
+```
+    public class Tramos
+    {
+        public int IdOrigen { get; set; }
+        public string Origen { get; set; }
+        public int IdDestino { get; set; }
+        public string Destino { get; set; }
+        public string Ruta { get; set; }
+    }
 
+    public class RutasTramos
+    {
+        public List<Tramos> lstRutasTramos { get; set; }
+    } 
+  
+    public class DistanciaTramos
+    {
+        public List<RutasTramos> lstTramos { get; set; }
+        public double DistanciaMinima { get; set; }
+    }
+ ```
+Desde el formulario principal FrRutasTransporte, se ha puesto un botón para que llame al procedimiento almacenado FrRutaMinima, que mostrará un DataGridView con las distancias mínimas. Al dar doble click sobre una las distancias, se abrirá un emergente con la ruta para esa distancia mínima
 
+### 1.3 PROCEDIMIENTO DE RUTAS NO ÓPTIMAS
 
+Para calcular las rutas no óptimas, usamos dos procedimientos almacenados. 
+- **RutaMasCorta**: Este procedimiento busca la ruta más corta entre dos paradas cuyos índices se pasan como parámtero. Para ello:
+  - Obtenemos todos los tramos de todas las rutas mediante un select con join a las tablas Rutas, RutasTramos y Tramos -> DistanciasTramos
+  - Se obtiene los tramos que empiezan por la parada que pasamos como parámetro y se concatenan a los tramos que finalizan en la parada que pasamos como parámetro.
+  - Se ordenan por la distancia y nos quedamos con el de menor distancia, que es el que devolvemos.
+- **RutasNoOptimas**: Se recorre todos los tramos de todas las rutas mediante un cursor y, para cada tramo, llama al procedimiento **RutaMasCorta**. Se comprueba si el resultado de esa llamada es una ruta con una distancia menor que la distancia directa entre las paradas, y se devuelve aquellos tramos en el que se ha encontrado una ruta de menor distancia.
+  
+Desde el formulario principal FrRutasTransporte, se ha puesto un botón para que abra el formulario FrTramosNoOptimos y llame al procedimiento almacenado RutasNoOptimas.
+  
+  
