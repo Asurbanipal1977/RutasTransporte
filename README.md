@@ -112,10 +112,12 @@ Desde el formulario principal FrRutasTransporte, se ha puesto un botón para que
   
  ### EJECUCIÓN
  Para ejecutar la aplicación hay que bajarse el repositorio, que incluye la base de datos. 
-  - Se debe restaurar la base de datos que está exportada en: 
+  - Se debe crear la base de datos RedTransporte y ejecutar el script que se encuentra en el archivo RedTransporte.sql: 
   [Base de datos](https://github.com/Asurbanipal1977/RutasTransporte/edit/main/RedTransporte.sql)
   
-  - Una vez resturada, se debe cambiar la cadena de conexión de la clase RutasTransporteCD por nuestra cadena de conexión:
+  
+  
+  - Una vez creada la base de datos, se debe cambiar la cadena de conexión de la aplicación, que se encuentra en la clase RutasTransporteCD, por la cadena de conexión de nuestro equipo. En mi caso es:
   ```
   private static readonly string cadenaConexion = @"Data Source=GIGABYTE-SABRE\SQLEXPRESS;Initial Catalog=RedTransporte;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 ```
